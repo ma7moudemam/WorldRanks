@@ -1,0 +1,35 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: transparent;
+}
+
+th {
+  padding: 12px 15px;
+  padding-left: 0;
+  text-align: left;
+  color: #D2D5DA;
+  border-bottom: 2px solid #282B30;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  color: #D2D5DA;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  th, td {
+    min-width: 120px;
+  }
+}

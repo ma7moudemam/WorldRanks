@@ -1,0 +1,23 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" class="fs-14">
+          {{ column.header }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let column of columns">
+          <ng-container *ngIf="column.field === 'flag'; else textContent">
+            <img [src]="row[column.field]" alt="{{ row.name }} flag" style="width: 30px; height: auto;">
+          </ng-container>
+          <ng-template #textContent>
+            {{ row[column.field] }}
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
