@@ -11,7 +11,7 @@ export class CountriesService {
   private apiUrl = 'https://restcountries.com/v3.1/all?sort=population';
 
   private http = inject(HttpClient);
-  constructor() { 
+  constructor() {
 
   }
 
